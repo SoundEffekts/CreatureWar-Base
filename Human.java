@@ -1,10 +1,10 @@
 import java.util.Random;
 
 /**
- * Write a description of class Human here.
+ * The scariest monster of all ( An extension of the Creature class with some field changes)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chris Boardman
+ * @version 11.15.15
  */
 public class Human extends Creature
 {
@@ -13,7 +13,8 @@ public class Human extends Creature
     private int maxStrength=13;
 
     /**
-     * Constructor for objects of class Human
+     * Constructor for objects of class Human. This overrides a few fields from the default 
+     * constructor, changing the maximum health and strength of humans.
      */
     public Human()
     {

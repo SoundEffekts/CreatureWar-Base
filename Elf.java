@@ -1,24 +1,29 @@
 import java.util.Random;
 
 /**
- * Write a description of class Human here.
+ * The elf class contains data regarding the elf creature, with an overridden damage() function. 
+ * Pointy ears not included.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chris Boardman 
+ * @version 11.14.15
  */
 public class Elf extends Creature
 {
     // instance variables - replace the example below with your own
         Random rand = new Random();
-    /**
-     * Constructor for objects of class Human
-     */
+/**
+ * Constructor which calls the superclass constructor ( Creature ) 
+ */
     public Elf()
     {
         super();
         
     }
-    
+/**
+ * Damage function which returns an int, but has the chance to critical for twice as much damage.
+ * This is based on a conditional which checks the crit field.
+ * @return int damage
+ */    
     public int damage()
     {
        Random rand = new Random();

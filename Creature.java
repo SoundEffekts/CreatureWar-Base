@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.Random;       //To be used by the damage function.
 
 /**
  * The creature class serves as the superclass for all other creatures in the wars soon . 
@@ -13,7 +13,9 @@ public class Creature
    protected int strength;
    protected final int minHP;
    protected final int minStr;
-   
+/** Initalizes values for all fields.
+ * 
+ */      
    public Creature()
    {
        hp=10;
@@ -21,13 +23,17 @@ public class Creature
        minHP=5;
        minStr=5;
    }
-    
+/** Returns an int equal to a random number based on the creature's strength.
+ * @return int damage
+ */       
    public int damage(){
        Random rand = new Random();
        int damage = rand.nextInt(strength)+1;
        return damage;
     }
-    
+/** Sets the strength of the creature
+ * @param str
+ */    
    public void setStrength(int str)
    {
        strength=str;
@@ -37,7 +43,9 @@ public class Creature
        }
            
    }
-       
+/** Sets the health of the creature
+ * @param str
+ */          
    public void setHealth(int health)
    {
        hp=health;

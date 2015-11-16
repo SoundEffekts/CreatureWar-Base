@@ -2,36 +2,21 @@
 import java.util.Random;
 
 /**
- * Write a description of class Human here.
+ * Hell's Mightiest Warrior ( An extension of the Demon class)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chris Boardman
+ * @version 15.15.15
  */
 public class CyberDemon extends Demon
 {
     // instance variables - replace the example below with your own
         Random rand = new Random();
     /**
-     * Constructor for objects of class Human
+     * Constructor for objects of class CyberDemon. Calls the Demon constructor.
      */
     public CyberDemon()
     {
         super();
-        
-    }
-    
-    public int damage()
-    {
-       Random rand = new Random();
-       int damage = rand.nextInt(strength)+1;
-       int crit= rand.nextInt(100)+1;
-       if(crit==5)
-       {
-           damage=damage+50;
-        }
-       
-    
-       return damage;
         
     }
 

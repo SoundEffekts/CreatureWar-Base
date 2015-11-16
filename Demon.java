@@ -1,24 +1,28 @@
 import java.util.Random;
 
 /**
- * Write a description of class Human here.
+ * An extension of the Creature class with an overridden damage function. May also be on fire.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chris Boardman   
+ * @version 11.15.15
  */
 public class Demon extends Creature
 {
-    // instance variables - replace the example below with your own
-        Random rand = new Random();
-    /**
-     * Constructor for objects of class Human
-     */
+
+
+/**
+ * Constructor for objects of class Demon. Calls the super from Creature.
+ */
     public Demon()
     {
         super();
         
     }
-    
+/**
+ * Overidden damage function which has the possibility to add an additional 50 damage 
+ * to a damage roll.
+ * @return int damage
+ */   
     public int damage()
     {
        Random rand = new Random();

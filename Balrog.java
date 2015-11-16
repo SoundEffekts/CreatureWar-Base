@@ -2,24 +2,31 @@
 import java.util.Random;
 
 /**
- * Write a description of class Human here.
+ * I am a servant of the Secret Fire, wielder of the flame of Anor. You cannot pass. 
+ * (Unless you're an extended version of the demon class, which, this is.)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chris Boardman    
+ * @version 11.15.15
  */
 public class Balrog extends Demon
 {
     // instance variables - replace the example below with your own
         Random rand = new Random();
     /**
-     * Constructor for objects of class Human
+     * Constructor for objects of class Balrog. This extends the class Demon, which in turn is calling
+     * the constructor from Creature.
+     * 
      */
     public Balrog()
     {
         super();
         
     }
-    
+   /**
+    * Another overrriden damage function. This time the Balrog class essentially doubles the times 
+    * it attacks, without having to make two calls to the damage function.
+    * @returndamage
+    */ 
     public int damage()
     {
        Random rand = new Random();
