@@ -25,7 +25,7 @@ public class Balrog extends Demon
    /**
     * Another overrriden damage function. This time the Balrog class essentially doubles the times 
     * it attacks, without having to make two calls to the damage function.
-    * @returndamage
+    * @return damage
     */ 
     public int damage()
     {
