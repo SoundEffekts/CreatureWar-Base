@@ -11,8 +11,8 @@ public class Creature
 {
    protected int hp;
    protected int strength;
-   protected final int minHP;
-   protected final int minStr;
+   protected final int minHP=5;
+   protected final int minStr=5;
 /** Initalizes values for all fields.
  * 
  */      
@@ -20,9 +20,17 @@ public class Creature
    {
        hp=10;
        strength=10;
-       minHP=5;
-       minStr=5;
    }
+
+/** Initalizes a custom Creature
+ * 
+ */      
+   public Creature(int health, int str)
+   {
+       setHealth(health);
+       setStrength(str);
+   }
+
 /** Returns an int equal to a random number based on the creature's strength.
  * @return int damage
  */       
@@ -31,6 +39,15 @@ public class Creature
        int damage = rand.nextInt(strength)+1;
        return damage;
     }
+    
+/** Take a wound from an outside source
+ * @param damage
+ */
+   public void takeDamage(int damage)
+   {
+       hp= hp-damage;
+    }
+    
 /** Sets the strength of the creature
  * @param str
  */    
@@ -55,6 +72,20 @@ public class Creature
        }
            
    }   
-    
+/** Returns the health of the creature
+ * @return hp
+ */          
+   public int getHealth()
+   {
+       return hp;           
+   }     
+/** Returns the health of the creature
+ * @return hp
+ */          
+   public int getStrength()
+   {
+       return strength;           
+   }     
+         
    
 }
