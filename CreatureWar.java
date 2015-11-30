@@ -3,26 +3,21 @@ import java.util.*;
 /**
  * This class creates two arrays of creatures and has them "battle" one vs one
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Chris Boardman 
+ * @version 11.29.15
  */
 public class CreatureWar
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class CreatureWar
-     */
     public CreatureWar()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
-
-     */
+     * Creates two seperate arrays of creatures and has them "battle" each other via methods. 
+     * Winner is displayed after the results are printed and calculated.
+     * 
+    */
     public void battle()
     {
         int i=0;
@@ -32,7 +27,7 @@ public class CreatureWar
         
         for( i=0; i<20; i++)
         {
-            team1.add(i,new Elf());
+            team1.add(i,new Human());
             team2.add(i,new Human());
         }
         team1.add(10,new CyberDemon());
@@ -42,43 +37,43 @@ public class CreatureWar
   
         int teamOneIndex=0;
         int teamTwoIndex=0;
-    System.out.println("Begin the battle!");    
+    System.out.println("The battle begins!");
     
-    while( teamOneIndex < 21 || teamTwoIndex < 21 )
+    while( teamOneIndex < team1.size() && teamTwoIndex < team2.size())
     {
-        while(team1.get(teamOneIndex).getHealth() > 0 && team2.get(teamTwoIndex).getHealth() > 0)
+        
         {
             team1.get(teamOneIndex).takeDamage(team2.get(teamTwoIndex).damage());
             team2.get(teamTwoIndex).takeDamage(team1.get(teamOneIndex).damage());
 
         }
-            if(team1.get(teamOneIndex).getHealth()<0 && team2.get(teamTwoIndex).getHealth()<0)
+        if(team1.get(teamOneIndex).getHealth()<0 && team2.get(teamTwoIndex).getHealth()<0)
             {
                 teamOneIndex++; 
                 teamTwoIndex++;
-                System.out.println("both died!");
+                System.out.println("Both creatures died!");
             }
             else if(team1.get(teamOneIndex).getHealth()<0)
             {
                 teamOneIndex++;
-                System.out.println("1 died");
+                System.out.println("A creature from Team One died");
             }
             else if(team2.get(teamTwoIndex).getHealth()<0)
             {
                 teamTwoIndex++;
-                System.out.println("2 died");
+                System.out.println("A creature from Team Two died");
             }
             
     }
     
     String result=""; 
-    System.out.println(teamOneIndex);
-    System.out.println(teamTwoIndex);  
-    if(teamOneIndex==21 && teamOneIndex==21)
+    System.out.println("Team One Casualties: "+teamOneIndex);
+    System.out.println("Team Two Casualties: "+teamTwoIndex);  
+    if(teamOneIndex<21 && teamOneIndex<21)
         result="Nobody!";
-    if(teamOneIndex==20)
+    if(teamOneIndex<21)
         result="Team Two!";
-    if(teamTwoIndex==20)
+    if(teamTwoIndex<21)
         result="Team One!" ;       
     System.out.println("And the winner is...." + result);
     

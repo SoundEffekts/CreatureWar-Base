@@ -16,6 +16,8 @@ public class Demon extends Creature
     public Demon()
     {
         super();
+        setHealth(30);
+        setStrength(25);
         
     }
 /**

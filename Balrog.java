@@ -20,6 +20,9 @@ public class Balrog extends Demon
     public Balrog()
     {
         super();
+        setHealth(50);
+        setStrength(20);
+        
         
     }
    /**

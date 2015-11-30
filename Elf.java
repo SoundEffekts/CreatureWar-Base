@@ -17,7 +17,8 @@ public class Elf extends Creature
     public Elf()
     {
         super();
-        
+        setHealth(7);
+        setStrength(3);
     }
 /**
  * Damage function which returns an int, but has the chance to critical for twice as much damage.

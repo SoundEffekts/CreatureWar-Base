@@ -9,8 +9,8 @@ import java.util.Random;       //To be used by the damage function.
  */
 public class Creature
 {
-   protected int hp;
-   protected int strength;
+   protected int hp=10;
+   protected int strength=10;
    protected final int minHP=5;
    protected final int minStr=5;
 /** Initalizes values for all fields.
@@ -18,7 +18,8 @@ public class Creature
  */      
    public Creature()
    {
-       hp=10;
+       setStrength(strength);
+       setHealth(hp);
        strength=10;
    }
 
@@ -53,7 +54,8 @@ public class Creature
  */    
    public void setStrength(int str)
    {
-       strength=str;
+       Random rand = new Random();
+       strength=str+rand.nextInt(5);
        if(strength<minStr)
        {
            strength=minStr;
@@ -65,7 +67,8 @@ public class Creature
  */          
    public void setHealth(int health)
    {
-       hp=health;
+       Random rand = new Random();
+       hp=health+ rand.nextInt(10);
        if(hp<minHP)
        {
            hp=minHP;
